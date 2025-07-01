@@ -2,8 +2,9 @@ import express from 'express';
 
 const app = express();
 
-app.listen('/trial', () => {
-  console.log('Running !!');
+app.get('/', (req, res) => {
+  console.log('healthy');
+  res.send('healthy');
 });
 
-export default app;
+app.listen(8080);
